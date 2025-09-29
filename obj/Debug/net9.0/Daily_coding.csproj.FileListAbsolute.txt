@@ -1,0 +1,14 @@
+/Users/sakon/dev_project/csharp/Daily_coding/bin/Debug/net9.0/Daily_coding
+/Users/sakon/dev_project/csharp/Daily_coding/bin/Debug/net9.0/Daily_coding.deps.json
+/Users/sakon/dev_project/csharp/Daily_coding/bin/Debug/net9.0/Daily_coding.runtimeconfig.json
+/Users/sakon/dev_project/csharp/Daily_coding/bin/Debug/net9.0/Daily_coding.dll
+/Users/sakon/dev_project/csharp/Daily_coding/bin/Debug/net9.0/Daily_coding.pdb
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.AssemblyInfoInputs.cache
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.AssemblyInfo.cs
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.csproj.CoreCompileInputs.cache
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.dll
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/refint/Daily_coding.dll
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.pdb
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.genruntimeconfig.cache
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/ref/Daily_coding.dll

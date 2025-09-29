@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Daily_coding/1.0.0": {
+        "runtime": {
+          "Daily_coding.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Daily_coding/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
