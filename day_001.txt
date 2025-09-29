@@ -1,1 +1,95 @@
-Console.WriteLine("Hello, World!");
+## DATA TYPES
+
+C# is a strongly-typed language, requiring explicit declaration of a variable's data type. C# data types are categorized into two main types: Value Types and Reference Types. 
+
+1. Value Types:
+Variables of value types directly contain their data in memory. Each variable holds its own copy of the data.
+
+-Integral Numeric Types: Store whole numbers (integers).
+
+sbyte: 8-bit signed integer (-128 to 127)
+byte: 8-bit unsigned integer (0 to 255)
+short: 16-bit signed integer (-32,768 to 32,767)
+ushort: 16-bit unsigned integer (0 to 65,535)
+int: 32-bit signed integer (-2,147,483,648 to 2,147,483,647)
+uint: 32-bit unsigned integer (0 to 4,294,967,295)
+long: 64-bit signed integer
+ulong: 64-bit unsigned integer
+
+-Floating-Point Numeric Types: Store numbers with decimal points.
+
+float: Single-precision 32-bit floating-point number
+double: Double-precision 64-bit floating-point number
+decimal: 128-bit decimal floating-point number (suitable for financial calculations due to higher precision)
+
+-Other Value Types:
+
+bool: Stores a Boolean value (true or false)
+char: Stores a single Unicode character (UTF-16)
+struct: User-defined value types
+
+2. Reference Types:
+Variables of reference types store references (memory addresses) to their data (objects). Multiple variables can reference the same object, meaning operations on one variable can affect the object referenced by others. 
+
+-Predefined Reference Types:
+
+object: The ultimate base class for all other types in the .NET Framework. Can store a value of any data type.
+string: Represents a sequence of Unicode characters.
+dynamic: A type that bypasses compile-time type checking and resolves at runtime.
+
+-User-Defined Reference Types:
+
+class: User-defined blueprints for objects, encapsulating data and behavior.
+interface: Defines a contract that classes can implement.
+delegate: Represents a reference to a method.
+record: A special kind of reference type primarily used for immutable data.
+
+3. Pointer Types (Unsafe Code):
+Pointer types are used in specific scenarios involving interoperation with unmanaged code and require the unsafe keyword. They are less common in typical C# development. 
+
+-----------------------------------------------------------
+
+## CS8600
+
+The C# compiler warning CS8600, "Converting null literal or possible null value to non-nullable type," indicates that you are attempting to assign a value that could potentially be null to a variable or parameter that has been declared as a non-nullable reference type. This warning is part of C#'s Nullable Reference Types feature, introduced to help prevent NullReferenceException errors at runtime.
+
+How to resolve CS8600:
+-Make the target type nullable
+-Ensure the value is not null before assignment
+-Null-coalescing operator (??)
+-Null-forgiving operator (!)
+
+-----------------------------------------------------------
+
+## INPUT
+
+In C#, user input from the console is primarily handled by methods within the System.Console class. The most common methods for this purpose are ReadLine(), Read(), and ReadKey()
+
+-Console.ReadLine().
+This method reads an entire line of text from the standard input stream until the user presses Enter. It returns the input as a string.
+
+Console.Read().
+This method reads the next character from the standard input stream. It returns the character's ASCII value (an int). Subsequent calls to Read() will retrieve characters one at a time from the buffered input until the Enter key is pressed. 
+
+Console.ReadKey().
+This method reads a single key press from the console and returns a ConsoleKeyInfo object, which provides information about the key pressed, including the character and any modifier keys (like Shift, Ctrl, Alt). It does not require the user to press Enter.
+
+Type Conversion:
+When using Console.ReadLine() to get numeric input, the returned string needs to be converted to the appropriate numeric type (e.g., int, double). This can be done using methods like int.Parse(), Convert.ToInt32(), or double.Parse(). Error handling (e.g., using TryParse() methods or try-catch blocks) is crucial to manage cases where the user enters non-numeric data.
+
+-----------------------------------------------------------
+
+## OUTPUT
+
+In C#, output refers to the process of displaying data, messages, or results to the user, typically on the console or other output devices. The primary class used for handling output in C# console applications is the Console class within the System namespace. 
+
+Two main methods of the Console class are used for displaying output:
+
+-Console.WriteLine(): This method writes a specified value to the console and then terminates the line, meaning subsequent output will appear on a new line.
+
+-Console.Write(): This method writes a specified value to the console but does not append a new line character. Subsequent output will appear on the same line.
+
+Other Important Output Concepts:
+-String Interpolation: A convenient way to embed expressions directly within string literals using the $ prefix.
+-Escape Sequences: Special character combinations within strings used for formatting, such as \n for a new line, \t for a tab, or \" to include a double quote.
+-Formatting Output: The Console.WriteLine() method also supports composite formatting, allowing you to embed formatted values into a string using placeholders.

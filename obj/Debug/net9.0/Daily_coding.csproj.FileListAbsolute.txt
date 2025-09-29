@@ -12,3 +12,4 @@
 /Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.pdb
 /Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.genruntimeconfig.cache
 /Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/ref/Daily_coding.dll
+/Users/sakon/dev_project/csharp/Daily_coding/obj/Debug/net9.0/Daily_coding.sourcelink.json

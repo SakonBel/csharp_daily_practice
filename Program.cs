@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+Console.Write("Enter your key : ");
+ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+Console.WriteLine($"\nYou press : {keyInfo.KeyChar}");
