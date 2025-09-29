@@ -1,6 +1,7 @@
-﻿
+﻿Console.Write("Tell me your name : ");
+string? userName = Console.ReadLine();
+Console.Write("How old are you : ");
+int? userAge = int.Parse(Console.ReadLine());
 
-Console.Write("Enter your key : ");
-ConsoleKeyInfo keyInfo = Console.ReadKey();
 
-Console.WriteLine($"\nYou press : {keyInfo.KeyChar}");
+Console.WriteLine($"Hello, {userName}! \nYou are {userAge} years old and can access our program.");
