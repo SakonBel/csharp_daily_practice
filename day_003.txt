@@ -1,0 +1,10 @@
+# Explicitly Cast Operands in Calculations:
+When performing arithmetic operations, especially division with integer operands, explicitly cast at least one of the operands to double before the operation. This forces floating-point division, preventing integer truncation.
+
+# try/Catch block
+
+# if/else
+
+# initialize as null
+
+# prevent readline nullable returns
