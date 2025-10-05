@@ -1,85 +1,114 @@
 ﻿// Create (simple) calculator
-Operation oper = new();
-oper.OperationResult();
+// Operation oper = new();
+// oper.OperationResult();
 
-class Operation
+// class Operation
+// {
+//   int? firstNumber = null;
+//   int? secondNumber = null;
+//   string? oper = null;
+//   double? result = null;
+//   public void GetFirstNumber()
+//   {
+//     while (firstNumber == null)
+//     {
+//       Console.Write("Insert your first number : ");
+//       try
+//       {
+//         firstNumber = int.Parse(Console.ReadLine() ?? "");
+//       }
+//       catch
+//       {
+//         Console.WriteLine("First number is not a valid number");
+//       }
+//     }
+//   }
+
+//   public void GetSecondNumber()
+//   {
+
+//     while (secondNumber == null)
+//     {
+//       Console.Write("Insert your second number : ");
+//       try
+//       {
+//         secondNumber = int.Parse(Console.ReadLine() ?? "");
+//       }
+//       catch
+//       {
+//         Console.WriteLine("Second number is not a valid number");
+//       }
+//     }
+//   }
+
+//   public void UseOperator()
+//   {
+
+//     while (oper == null)
+//     {
+//       Console.Write("Insert operator (+,-,*,/) : ");
+
+//       oper = Console.ReadLine();
+//       if (oper == "+")
+//       {
+//         result = firstNumber + secondNumber;
+//       }
+//       else if (oper == "-")
+//       {
+//         result = firstNumber - secondNumber;
+//       }
+//       else if (oper == "*")
+//       {
+//         result = firstNumber * secondNumber;
+//       }
+//       else if (oper == "/")
+//       {
+//         result = (double?)firstNumber / secondNumber;
+//       }
+//       else
+//       {
+//         Console.WriteLine("Not a valid operator!");
+//         oper = null;
+//       }
+
+//     }
+//   }
+
+//   public void OperationResult()
+//   {
+//     GetFirstNumber();
+//     GetSecondNumber();
+//     UseOperator();
+//     Console.WriteLine($"Your result is : {result}");
+//   }
+// }
+
+// Create String Reverser
+ChangeString ch = new();
+ch.ReverseString();
+
+class ChangeString
 {
-  int? firstNumber = null;
-  int? secondNumber = null;
-  string? oper = null;
-  double? result = null;
-  public void GetFirstNumber()
+  string? sentence = "";
+
+  public void ReverseString()
   {
-    while (firstNumber == null)
+    while (sentence == "")
     {
-      Console.Write("Insert your first number : ");
-      try
+      Console.Write("Please input your string : ");
+      sentence = Console.ReadLine() ?? "";
+      if (string.IsNullOrEmpty(sentence))
       {
-        firstNumber = int.Parse(Console.ReadLine() ?? "");
-      }
-      catch
-      {
-        Console.WriteLine("First number is not a valid number");
-      }
-    }
-  }
-
-  public void GetSecondNumber()
-  {
-
-    while (secondNumber == null)
-    {
-      Console.Write("Insert your second number : ");
-      try
-      {
-        secondNumber = int.Parse(Console.ReadLine() ?? "");
-      }
-      catch
-      {
-        Console.WriteLine("Second number is not a valid number");
-      }
-    }
-  }
-
-  public void UseOperator()
-  {
-
-    while (oper == null)
-    {
-      Console.Write("Insert operator (+,-,*,/) : ");
-
-      oper = Console.ReadLine();
-      if (oper == "+")
-      {
-        result = firstNumber + secondNumber;
-      }
-      else if (oper == "-")
-      {
-        result = firstNumber - secondNumber;
-      }
-      else if (oper == "*")
-      {
-        result = firstNumber * secondNumber;
-      }
-      else if (oper == "/")
-      {
-        result = (double?)firstNumber / secondNumber;
-      }
-      else
-      {
-        Console.WriteLine("Not a valid operator!");
-        oper = null;
+        Console.WriteLine("Please insert a valid string !!!");
       }
 
     }
-  }
-
-  public void OperationResult()
-  {
-    GetFirstNumber();
-    GetSecondNumber();
-    UseOperator();
-    Console.WriteLine($"Your result is : {result}");
+    if (sentence is not null)
+    {
+      char[] charArr = sentence.ToCharArray();
+      Array.Reverse(charArr);
+      string newString = new(charArr);
+      Console.WriteLine($"Your new string is : {newString}");
+    }
   }
 }
-
