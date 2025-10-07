@@ -1,4 +1,5 @@
 ﻿// Create (simple) calculator
+
 // Operation oper = new();
 // oper.OperationResult();
 
@@ -84,8 +85,11 @@
 // }
 
 // Create String Reverser
-ChangeString ch = new();
-ch.ReverseString();
+
+// ChangeString ch = new();
+// ch.ReverseString();
+
+ChangeString.WordCounter();
 
 class ChangeString
 {
@@ -111,4 +115,23 @@ class ChangeString
       Console.WriteLine($"Your new string is : {newString}");
     }
   }
+
+  public static void WordCounter()
+  {
+    string? word = "";
+    while (word == "")
+    {
+      Console.Write("Please input your word : ");
+      word = Console.ReadLine() ?? "";
+
+      if (string.IsNullOrEmpty(word))
+      {
+        Console.WriteLine("Please in put the valid word!\n");
+      }
+    }
+    Console.WriteLine($"The word \"{word}\" has {word.Length} character!");
+  }
 }
+
+// Create word counter
+

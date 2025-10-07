@@ -1,3 +1,4 @@
 -Top-level statements must precede namespace and type declarations.(CS8803)
 -new' expression can be simplified(IDE0090)
 -Write methods in class
+-Use (if) for type checking
