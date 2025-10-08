@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Daily_coding")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f5a6f23efe4e45ac58c69c6b05901a979286ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b37a536ccd0c7e830da984ed293cc5361d63fbdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Daily_coding")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Daily_coding")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

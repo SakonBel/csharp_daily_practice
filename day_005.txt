@@ -1,0 +1,1 @@
+-static methods can be called even not initialize object

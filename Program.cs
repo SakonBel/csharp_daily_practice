@@ -89,49 +89,86 @@
 // ChangeString ch = new();
 // ch.ReverseString();
 
-ChangeString.WordCounter();
+// ChangeString.WordCounter();
 
-class ChangeString
-{
-  string? sentence = "";
+// class ChangeString
+// {
+//   string? sentence = "";
 
-  public void ReverseString()
-  {
-    while (sentence == "")
-    {
-      Console.Write("Please input your string : ");
-      sentence = Console.ReadLine() ?? "";
-      if (string.IsNullOrEmpty(sentence))
-      {
-        Console.WriteLine("Please insert a valid string !!!");
-      }
+//   public void ReverseString()
+//   {
+//     while (sentence == "")
+//     {
+//       Console.Write("Please input your string : ");
+//       sentence = Console.ReadLine() ?? "";
+//       if (string.IsNullOrEmpty(sentence))
+//       {
+//         Console.WriteLine("Please insert a valid string !!!");
+//       }
 
-    }
-    if (sentence is not null)
-    {
-      char[] charArr = sentence.ToCharArray();
-      Array.Reverse(charArr);
-      string newString = new(charArr);
-      Console.WriteLine($"Your new string is : {newString}");
-    }
-  }
+//     }
+//     if (sentence is not null)
+//     {
+//       char[] charArr = sentence.ToCharArray();
+//       Array.Reverse(charArr);
+//       string newString = new(charArr);
+//       Console.WriteLine($"Your new string is : {newString}");
+//     }
+//   }
 
-  public static void WordCounter()
-  {
-    string? word = "";
-    while (word == "")
-    {
-      Console.Write("Please input your word : ");
-      word = Console.ReadLine() ?? "";
+//   public static void WordCounter()
+//   {
+//     string? word = "";
+//     while (word == "")
+//     {
+//       Console.Write("Please input your word : ");
+//       word = Console.ReadLine() ?? "";
 
-      if (string.IsNullOrEmpty(word))
-      {
-        Console.WriteLine("Please in put the valid word!\n");
-      }
-    }
-    Console.WriteLine($"The word \"{word}\" has {word.Length} character!");
-  }
-}
+//       if (string.IsNullOrEmpty(word))
+//       {
+//         Console.WriteLine("Please in put the valid word!\n");
+//       }
+//     }
+//     Console.WriteLine($"The word \"{word}\" has {word.Length} character!");
+//   }
+// }
 
 // Create word counter
 
+// Create area calculator
+
+
+Area.RectangleArea();
+class Area
+{
+  public static void RectangleArea()
+  {
+    string? width = "";
+    string? height = "";
+
+    while (width == "")
+    {
+      Console.Write("Please input the width(cm) : ");
+      width = Console.ReadLine();
+
+      if (string.IsNullOrEmpty(width))
+      {
+        Console.WriteLine("The width is invalid!!!\nPlease re-enter the valid width\n");
+      }
+    }
+
+    while (height == "")
+    {
+      Console.Write("Please input the height(cm) : ");
+      height = Console.ReadLine();
+      if (string.IsNullOrEmpty(height))
+      {
+        Console.WriteLine("The height is invalid!!!\nPlease re-enter the valid height\n");
+      }
+    }
+
+    string area = (int.Parse(width ?? "") * int.Parse(height ?? "")).ToString();
+
+    Console.WriteLine($"Your rectangle area is : {area} cm.");
+  }
+}
