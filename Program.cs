@@ -138,7 +138,7 @@
 // Create area calculator
 
 
-Area.RectangleArea();
+Area.TriangleArea();
 class Area
 {
   public static void RectangleArea()
@@ -171,4 +171,36 @@ class Area
 
     Console.WriteLine($"Your rectangle area is : {area} cm.");
   }
+
+  public static void TriangleArea()
+  {
+    string? width = "";
+    string? height = "";
+
+    while (width == "")
+    {
+      Console.Write("Please input the width(cm) : ");
+      width = Console.ReadLine();
+
+      if (string.IsNullOrEmpty(width))
+      {
+        Console.WriteLine("The width is invalid!!!\nPlease re-enter the valid width\n");
+      }
+    }
+
+    while (height == "")
+    {
+      Console.Write("Please input the height(cm) : ");
+      height = Console.ReadLine();
+      if (string.IsNullOrEmpty(height))
+      {
+        Console.WriteLine("The height is invalid!!!\nPlease re-enter the valid height\n");
+      }
+    }
+
+    string area = (int.Parse(width ?? "") * int.Parse(height ?? "") * 0.5).ToString();
+
+    Console.WriteLine($"Your triangle area is : {area} cm.");
+  }
+
 }
