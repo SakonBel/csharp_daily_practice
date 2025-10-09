@@ -138,69 +138,97 @@
 // Create area calculator
 
 
-Area.TriangleArea();
-class Area
+// Area.TriangleArea();
+// class Area
+// {
+//   public static void RectangleArea()
+//   {
+//     string? width = "";
+//     string? height = "";
+
+//     while (width == "")
+//     {
+//       Console.Write("Please input the width(cm) : ");
+//       width = Console.ReadLine();
+
+//       if (string.IsNullOrEmpty(width))
+//       {
+//         Console.WriteLine("The width is invalid!!!\nPlease re-enter the valid width\n");
+//       }
+//     }
+
+//     while (height == "")
+//     {
+//       Console.Write("Please input the height(cm) : ");
+//       height = Console.ReadLine();
+//       if (string.IsNullOrEmpty(height))
+//       {
+//         Console.WriteLine("The height is invalid!!!\nPlease re-enter the valid height\n");
+//       }
+//     }
+
+//     string area = (int.Parse(width ?? "") * int.Parse(height ?? "")).ToString();
+
+//     Console.WriteLine($"Your rectangle area is : {area} cm.");
+//   }
+
+//   public static void TriangleArea()
+//   {
+//     string? width = "";
+//     string? height = "";
+
+//     while (width == "")
+//     {
+//       Console.Write("Please input the width(cm) : ");
+//       width = Console.ReadLine();
+
+//       if (string.IsNullOrEmpty(width))
+//       {
+//         Console.WriteLine("The width is invalid!!!\nPlease re-enter the valid width\n");
+//       }
+//     }
+
+//     while (height == "")
+//     {
+//       Console.Write("Please input the height(cm) : ");
+//       height = Console.ReadLine();
+//       if (string.IsNullOrEmpty(height))
+//       {
+//         Console.WriteLine("The height is invalid!!!\nPlease re-enter the valid height\n");
+//       }
+//     }
+
+//     string area = (int.Parse(width ?? "") * int.Parse(height ?? "") * 0.5).ToString();
+
+//     Console.WriteLine($"Your triangle area is : {area} cm.");
+//   }
+// }
+string ValNum = NumberChecker.EvenOdd();
+Console.WriteLine($"Your number is {ValNum} number!");
+
+class NumberChecker
 {
-  public static void RectangleArea()
+  public static string EvenOdd()
   {
-    string? width = "";
-    string? height = "";
-
-    while (width == "")
+    string val = "";
+    while (string.IsNullOrEmpty(val))
     {
-      Console.Write("Please input the width(cm) : ");
-      width = Console.ReadLine();
-
-      if (string.IsNullOrEmpty(width))
+      Console.Write("Please enter the number : ");
+      val = Console.ReadLine() ?? "";
+      if (string.IsNullOrEmpty(val))
       {
-        Console.WriteLine("The width is invalid!!!\nPlease re-enter the valid width\n");
+        Console.WriteLine("The number is not valid!!!");
       }
+
     }
 
-    while (height == "")
+    if (int.Parse(val) % 2 == 0)
     {
-      Console.Write("Please input the height(cm) : ");
-      height = Console.ReadLine();
-      if (string.IsNullOrEmpty(height))
-      {
-        Console.WriteLine("The height is invalid!!!\nPlease re-enter the valid height\n");
-      }
+      return "Even";
     }
-
-    string area = (int.Parse(width ?? "") * int.Parse(height ?? "")).ToString();
-
-    Console.WriteLine($"Your rectangle area is : {area} cm.");
+    else
+    {
+      return "Odd";
+    }
   }
-
-  public static void TriangleArea()
-  {
-    string? width = "";
-    string? height = "";
-
-    while (width == "")
-    {
-      Console.Write("Please input the width(cm) : ");
-      width = Console.ReadLine();
-
-      if (string.IsNullOrEmpty(width))
-      {
-        Console.WriteLine("The width is invalid!!!\nPlease re-enter the valid width\n");
-      }
-    }
-
-    while (height == "")
-    {
-      Console.Write("Please input the height(cm) : ");
-      height = Console.ReadLine();
-      if (string.IsNullOrEmpty(height))
-      {
-        Console.WriteLine("The height is invalid!!!\nPlease re-enter the valid height\n");
-      }
-    }
-
-    string area = (int.Parse(width ?? "") * int.Parse(height ?? "") * 0.5).ToString();
-
-    Console.WriteLine($"Your triangle area is : {area} cm.");
-  }
-
 }
