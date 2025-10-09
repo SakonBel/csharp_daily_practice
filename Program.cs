@@ -203,12 +203,12 @@
 //     Console.WriteLine($"Your triangle area is : {area} cm.");
 //   }
 // }
-string ValNum = NumberChecker.EvenOdd();
-Console.WriteLine($"Your number is {ValNum} number!");
+(string numType, string numVal) = NumberChecker.EvenOdd();
+Console.WriteLine($"Your number is ({numVal}) and is ({numType}) number!");
 
 class NumberChecker
 {
-  public static string EvenOdd()
+  public static (string numType, string numVal) EvenOdd()
   {
     string val = "";
     while (string.IsNullOrEmpty(val))
@@ -224,11 +224,11 @@ class NumberChecker
 
     if (int.Parse(val) % 2 == 0)
     {
-      return "Even";
+      return ("Even", val);
     }
     else
     {
-      return "Odd";
+      return ("Odd", val);
     }
   }
 }
